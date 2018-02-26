@@ -15,9 +15,9 @@ We are performing three tasks on the purchase data provided from Cloudera. [Here
 
 ## Question 1: product categiry and sales
 
-shell code:
+shell script:
 
-```
+```shell
 hadoop fs mapper.py reducer.py myinput myoutput1
 ```
 
@@ -26,7 +26,7 @@ Python code:
 
 - mapper
 
-```
+```python
 import sys
 
 for line in sys.stdin:
@@ -38,7 +38,7 @@ for line in sys.stdin:
 
 - reducer
 
-```
+```python
 import sys
 
 for line in sys.stdin:

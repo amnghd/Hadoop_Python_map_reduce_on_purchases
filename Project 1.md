@@ -205,3 +205,7 @@ for line in sys.stdin:
 ```
 4138476 	1034457953.26
 ```
+
+Here you can see a summary of the map reduce taskss:
+
+![figure.png](https://github.com/amnghd/Hadoop_Python_map_reduce_on_purchases/blob/master/h1p1.PNG)

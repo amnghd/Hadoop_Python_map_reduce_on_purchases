@@ -32,7 +32,7 @@ where:
 - %b is the size of the object returned to the client, in bytes. It will be "-" in case of status code 304.
 
 
-### Shell script to unzip
+### Shell scripts
 
 We need to unzip the data and bring it to the proper format.
 

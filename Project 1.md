@@ -1,4 +1,4 @@
-# Hadoop Python map reduce on purchases
+# Hadoop Python map reduce on purchases (201MB)
 We are performing three map-reduce tasks on purchases data set. The python codes, the shell scripts, and the results will be described in the readme section.
 
 
@@ -166,7 +166,7 @@ Chicago 	499.99
 
 ```
 
-## Question 3: - total sales value across all the stores, and the total number of sales
+## Question 3: total sales value across all the stores, and the total number of sales
 
 
 - Shell script
@@ -190,13 +190,25 @@ for line in sys.stdin:
 -reducer
 
 ```python
-mport sys
+import sys
+
+sale_value  = 0
+total_value = 0
+total_number = 0
 
 for line in sys.stdin:
-    data = line.strip().split("\t")
-    if len(data) == 6:
-        date, time, store, item, cost, payment = data
-        print "{0}\t{1}".format(cost,cost)
+    data_mapped = line.strip().split("\t")
+    if len(data_mapped) != 2:
+        # Something has gone wrong. Skip this line.
+        continue
+    sale_value = float(data_mapped[0])
+    total_value += sale_value
+    total_number += 1
+
+
+if total_number != 0:
+    print total_number, "\t",total_value
+
 ```
 
 

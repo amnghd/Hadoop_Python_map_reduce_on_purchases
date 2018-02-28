@@ -186,6 +186,7 @@ hadoop fs -cat myoutput_access1_1/part-0000>input3.txt
 hadoop fs -put input3.txt
 hadoop fs -mkdir myinput3_access
 hadoop fs -put input3.txt myinput3_access
+```
 
 Since the data is small enough (3MB), we do not require map and reduce. One single python code can take care of it:
 
